@@ -1,0 +1,16 @@
+[
+    {
+        "id":"1",
+        "name":"Ruben Arturo",
+        "apellidoP":"Sotelo ",
+        "apellidoM":"Navarro",
+        "edad":" 21"
+    },
+    {
+        "id":"2",
+        "name":"Jose Ali",
+        "apellidoP":"Mendoza",
+        "apellidoM":"Armas",
+        "edad":" 21"
+    }
+]
