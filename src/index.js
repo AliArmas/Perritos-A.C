@@ -29,7 +29,7 @@ app.use(`${app.get('url')}dogs`,require('./routes/dogs/dog'));
 
 //ERROR 404
 app.use((req,res, next) => {
-    res.status(404).sendFile(__dirname+"/views/404.html");
+    res.status(404).sendFile(__dirname+"/views/pages/404.html");
 });
 //iniciar el servidor
 app.listen(3000, () => {
