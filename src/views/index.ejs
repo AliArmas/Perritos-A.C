@@ -1,14 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <div>
-        <h1>LANDING PAGE</h1>
-    </div>
-</body>
+<%- include('../views/head'); %>
+  <body>
+    <header>
+      <div class="row"></div>
+      <div class="d-flex justify-content-center align-items-center flex-column">
+        <image src='https://cdn.glitch.me/423a592b-8a52-4351-b29e-e42e61cd3353%2Fbone-solid.svg?v=1634095439381'
+          width="60" height="100">
+        </image>
+        <h1>
+          Hotel para mascotas
+        </h1>
+        <image src='https://cdn.glitch.me/423a592b-8a52-4351-b29e-e42e61cd3353%2Fpath620.png?v=1634094583236'
+          width="200" height="200">
+        </image>
+        <h2 class='margen'>
+          Perritos A.C
+        </h2>
+      </div>
+    </header>
+    <%- include('../views/navbar'); %>
+      <div class="page">
+        <a name="pagina"></a>
+        <div class="row">
+          <div class="col-6">
+            <img src="" alt="">
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <div class="txtP">
+              <h1 class="titleText"><span>L</span>orem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque harum voluptate tempora
+                magni libero ullam officiis nesciunt cum nisi. Illum tenetur voluptates nihil necessitatibus iste
+                similique numquam tempora corporis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-6 d-flex align-items-center">
+            <div class="txtP ">
+              <h1 class="titleText"><span>L</span>orem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque harum voluptate tempora
+                magni libero ullam officiis nesciunt cum nisi. Illum tenetur voluptates nihil necessitatibus iste
+                similique numquam tempora corporis.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <img src="" alt="">
+          </div>
+
+        </div>
+        <div class="row mt-5">
+
+          <div class="col-6">
+            <img src="" alt="">
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <div class="txtP">
+              <h1 class="titleText"><span>L</span>orem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque harum voluptate tempora
+                magni libero ullam officiis nesciunt cum nisi. Illum tenetur voluptates nihil necessitatibus iste
+                similique numquam tempora corporis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-6 d-flex align-items-center">
+            <div class="txtP">
+              <h1 class="titleText"><span>L</span>orem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque harum voluptate tempora
+                magni libero ullam officiis nesciunt cum nisi. Illum tenetur voluptates nihil necessitatibus iste
+                similique numquam tempora corporis.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br><br>
+      <div class="container uk-margin-medium-top uk-align-center">
+        <iframe width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7879786747785!2d-93.27375268558431!3d16.23133613938553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85933b563fffffff%3A0x8d5b48ecb3b7c643!2sSoluciones%20Integrales%20de%20C%C3%B3mputo!5e0!3m2!1ses!2smx!4v1584863138780!5m2!1ses!2smx">
+        </iframe>
+      </div>
+      <br>
+      <br>
+      <div class="contact">
+        <div class="content">
+          <h2>Contactanos</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolores iste, veritatis sit nihil unde rem
+            mollitia, impedit ipsam quod omnis nulla, adipisci illum? Asperiores voluptatibus et aliquid quasi
+            temporibus.</p>
+        </div>
+        <div class="contenedor">
+          <div class="contacInfo">
+            <div class="box">
+              <div class="icon"></div>
+              <div class="text">
+                <h3>Direccion</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"></div>
+              <div class="text">
+                <h3>Telefono</h3>
+                <p>123 987 12 12</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"></div>
+              <div class="text">
+                <h3>Correo electronico</h3>
+                <p>pagina.web.django@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contactForm">
+            <div>
+              <form>
+                <h2>Envianos un correo</h2>
+                <div class="inpuBox">
+                  <input type="text" name="" id="">
+                  <span>Nombre completo</span>
+                </div>
+                <div class="inpuBox">
+                  <input type="text" name="" id="">
+                  <span>email</span>
+                </div>
+                <div class="inpuBox">
+                  <textarea required="required"></textarea>
+                  <span>Mensaje</span>
+                </div>
+                <div class="inpuBox">
+                  <input type="submit" name="" id="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <%- include('../views/footer'); %>
+      </footer>
+  </body>
+
 </html>

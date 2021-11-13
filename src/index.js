@@ -13,7 +13,7 @@ app.set('url', '/api/v1/');
 //motor de plantilla
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/views');
-
+app.use(express.static(__dirname + '/public'))
 
 //midelwares
 app.use(morgan('dev'));
@@ -35,5 +35,6 @@ app.use((req,res, next) => {
 app.listen(3000, () => {
     console.log(`Server is listening on port ${app.get('port')}`);   
 });
+
 
 
