@@ -11,7 +11,7 @@ router.get('/cats',(req,res) => {
     res.render('cats');
 });
 router.get('/dogs',(req,res) => {
-    res.render('dogs', {tite: 'Perros'});
+    res.render('dogs',);
 });
 router.get('/registro',(req,res) =>{
     res.render('register');
