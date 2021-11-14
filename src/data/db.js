@@ -1,6 +1,7 @@
 const mysql = require('mysql');
+require('dotenv').config();
 
-const config = {
+const conf = {
     host: 'localhost',
   	port: '3306',
   	user: 'root',
@@ -8,6 +9,6 @@ const config = {
   	database: 'Hotel_Mascota'
 };
 
-const connection = mysql.createConnection(config);
+const connection = mysql.createConnection(conf);
 module.exports = connection;
 // module.exports = connection;

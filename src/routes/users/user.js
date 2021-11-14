@@ -1,10 +1,19 @@
 const { Router } = require('express');
 const connection  = require('../../data/db');
+const userControllers = require('../../controllers/users.controller');
+
 const router = Router();
 
 //validators
 const { body, validationResult } = require('express-validator');
 
+router.use((req, res, next) => {
+    res.header(
+      "Access-Control-Allow-Headers",
+      "x-access-token, Origin, Content-Type, Accept"
+    );
+    next();
+});
 
 router.get('/', function(req, res,) {
     connection.query('SELECT Usuario.nombre, Usuario.telefono, Perro.nombre,Perro.raza FROM Perro JOIN Usuario ON Perro.idPerro=Usuario.idUsuario', function (error, results, fields) {
@@ -39,4 +48,6 @@ router.delete('/:id',(req,res) => {
 router.put('/:id', (req,res)=>{
     res.send("actualizando");
 });
+
+router.get('/', )
 module.exports = router;
