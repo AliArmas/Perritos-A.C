@@ -422,12 +422,12 @@ text-align: center;
   }
   
   
-  .cover{
+.cover{
     height: 400px;
     background-image: url(https://cdn.glitch.me/423a592b-8a52-4351-b29e-e42e61cd3353%2Fbaneer1.png?v=1634095465259);
     color: white;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: darken;
-  }
+}
