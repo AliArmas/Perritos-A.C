@@ -12,7 +12,8 @@ app.set('json spaces', 2);
 app.set('url', '/api/v1/');
 
 //motor de plantilla
-app.set('view engine', 'ejs');
+app.set('view engine','ejs');
+//carpetas estaticas 
 app.set('views',__dirname + '/views');
 app.use(express.static(__dirname + '/public'))
 
@@ -33,7 +34,7 @@ app.use((req,res, next) => {
     res.status(404).sendFile(__dirname+"/views/pages/404.html");
 });
 //iniciar el servidor
-app.listen(process.env.PORT, () => {
+app.listen(`${app.get('port')}`, () => {
     console.log(`Server is listening on port ${app.get('port')}`);   
 });
 

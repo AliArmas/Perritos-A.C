@@ -1,77 +1,86 @@
 body {
     font-family: HK Grotesk;
     background-color: var(--color-bg);
-  }
-  
-  /* Page structure */
-  .wrapper {
+}
+
+/* Page structure */
+.wrapper {
     min-height: var(--wrapper-height);
     display: grid;
     place-items: center;
     margin: 0 1rem;
-  }
-  .content {
+}
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1.25rem;
-  }
-  
-  /* Title h1 style */
-  .title {
+}
+
+/* Title h1 style */
+.title {
     color: #000000;
     font-family: HK Grotesk;
-    font-style:  normal;
+    font-style: normal;
     font-weight: bold;
     font-size: 100px;
     line-height: 105%;
     margin: 2rem 0 0;
-  }
-  
-  /* Very light scaling for our illustration */
-  .illo-container {
+}
+
+/* Very light scaling for our illustration */
+.illo-container {
     display: flex;
     justify-content: flex-end;
-  }
-  .illustration {
+}
+
+.illustration {
     max-width: 100%;
     max-height: 150px;
     margin-top: 1rem;
-  }
-  
-  /* Styles for our custom color form and its results */
-  .color-info {
+}
+
+/* Styles for our custom color form and its results */
+.color-info {
     margin-left: 5px;
-  }
-  .color-search {
+}
+
+.color-search {
     margin-top: 3rem;
-  }
-  .color-form {
+}
+
+.color-form {
     width: 90%;
     max-width: 500px;
     margin-left: 5px;
-  }
-  .color-form a:not(.btn--remix) {
+}
+
+.color-form a:not(.btn--remix) {
     font-weight: bold;
     color: var(--color-text-main);
     margin-top: 8px;
-  }
-  .color-form button {
+}
+
+.color-form button {
     margin-top: 8px;
-  }
-  .color-form button:hover {
+}
+
+.color-form button:hover {
     cursor: pointer;
     box-shadow: -8px 4px 20px #9BE7D8;
-  }
-  form {
+}
+
+form {
     margin: 0.75rem 0;
-  }
-  button,
-  input {
+}
+
+button,
+input {
     font-family: inherit;
     font-size: 100%;
     background: #FFFFFF;
@@ -79,30 +88,31 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     padding: 0.5rem 1rem;
-  }
-  label {
+}
+
+label {
     color: #000000;
     font-weight: bold;
-  }
-  
-  /* Instructions */
-  .instructions {
+}
+
+/* Instructions */
+.instructions {
     margin: 1rem auto 0;
-  }
-  .instructions p {
+}
+
+.instructions p {
     font-size: 1rem;
-  }
-  .margen{
+}
+
+.margen {
     margin-top: 30px;
-  }
-h2{
+}
+
+h2 {
     color: #000000;
 }
-  
-  ody {
-    margin: 0;
-  }
-  
+
+
 .cover {
     height: 400px;
     background-image: url();
@@ -112,317 +122,352 @@ h2{
     /*b background-color: rgba(0, 0, 0, 0.5);
    ackground-blend-mode: darken;*/
 }
-.card-title{
+
+.card-title {
     min-height: 3rem;
 }
-.card-text{
+
+.card-text {
     min-height: 10rem;
 }
-  
-.tira-producto{
-    overflow-x : scroll;
-    padding-top : 1rem;
-    padding-botton :1rem;
+
+.tira-producto {
+    overflow-x: scroll;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
-  
-.contenedor-producto{
-  display: flex;
+
+.contenedor-producto {
+    display: flex;
 }
-  
-.contenedor-producto .card{
+
+.contenedor-producto .card {
     width: 300px;
     flex-shrink: 0;
-    margin-rigth:1rem;
+    margin-right: 1rem;
 }
-  
-.cover-small{
+
+.cover-small {
     height: 200px;
     background-blend-mode: normal;
 }
-.responsive-iframe{
-    postion:relative;
-    padding-top: 56.25%;   
-  }
-  .responsive-iframe iframe{
+
+.responsive-iframe {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe iframe {
     position: absolut;
     top: 0;
     left: 0;
-    widht: 100%;
+    width: 100%;
     height: 100%;
-  }
-  
-  .footera,a{
-      background-color: #FFDDAB;
-      color: black;
-  }
-  .footer aimg{
-      width: 30px;
-      margin-right: 10px;
-  }
-  .container-footer{
-      margin-left: 40px;
-  }
-  
-  
-  .columna h4,h5{
-      margin-top: 20px;
-      text-align: center;
-  }
-  .footera ul,a{
-      text-decoration: none;
-      margin-top: 10px;
-      list-style: none;
-  }
-  footer{
-      width: 100%;
-  }
-  .navbara{
-    
-  }
-  
-  
-  h1,h2,h3,h4,h5,h6{
-      color: #33496D;
-      font-family: 'Oswald', sans-serif;
-  }
-  
-  label{
-      font-family: 'Montserrat', sans-serif;
-      color: #000;
-  }
-  
-  h1{
-      font-size: 30px;
-  }
-  
-  .registro h1{
-      text-align: center;
-  }
-  
-  .registro{
-      max-width: 600px;
-      margin-top: 50px;
-      margin-bottom: 100px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  .imgRegister img{
-      max-width: 600px;
-  }
-  .color-text{
-      font-style: normal;
-      font-size: 17px;
-      color: black;
-  }
-  .register h1,h6{
-      text-align: center;
-  }
-  /* -            --- -- - - -- -  -- - - -  */
-  .input button{
-      background-color: black;
-  }
-  
-  .conten img{
-      margin-top: 50px;
-      width: 30%;
-      margin-left: 200px;
-      margin-bottom: 40px;
-  }
-  .conten a{
-      text-decoration-style: none;
-      color: white;
-  }
-  
-  h1,h2,h3,h4,h5,h6{
-      color: #A4C0C8;
-      font-family: 'Oswald', sans-serif;
-  }
-  h1{
-      font-size: 30px;
-  }
-  
-  .texto{
-      text-align: center;
-  }
-  .but{
-      margin-left: 40px;
-      letter-spacing: 2px;
-      transition: 0.5s;
-  }
-  .but:hover{
-      letter-spacing: 6px;
-  }
-  .wrap{
-      background: rgba(0,0,0, 0.5) url("/assets/startup.jpg") no-repeat;
-      background-size: 1360px;
-      background-position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-      background-blend-mode: overlay;
-      background-attachment: fixed;
-  }
-  .wave{
-      position: absolute;
-      width: 100%;
-      bottom: -130px;
-      color: #ffff;
-      opacity: 1;
-  }
-  /*sections*/
-  .txtP h1{
-      text-align: center;
-  }
-  .txtP{
-      margin: 10px;
-  }
-  
-  .page h1,p{
-      color: #33496D;
-  }
-  .page img{
-      background-attachment: fixed;
-      position: sticky;
-      max-width: 650px;
-      max-height: 400px;
-  }
-.titleText span{
-    color : #FFA200;
+}
+
+.footera, a {
+    background-color: #FFDDAB;
+    color: black;
+}
+
+.footer aimg {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.container-footer {
+    margin-left: 40px;
+}
+
+
+.columna h4, h5 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footera ul, a {
+    text-decoration: none;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer{
+    width: 100%;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    color: #33496D;
+    font-family: 'Oswald', sans-serif;
+}
+/* h1,h2,h3,h4,h5,h6{
+    color: #A4C0C8;
+    font-family: 'Oswald', sans-serif;
+} */
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.registro h1 {
+    text-align: center;
+}
+
+.registro {
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgRegister img {
+    max-width: 600px;
+}
+
+.color-text {
+    font-style: normal;
+    font-size: 17px;
+    color: black;
+}
+
+.register h1, h6 {
+    text-align: center;
+}
+
+/* -            --- -- - - -- -  -- - - -  */
+.input button {
+    background-color: black;
+}
+
+.conten img {
+    margin-top: 50px;
+    width: 30%;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+
+.conten a {
+    text-decoration-style: none;
+    color: white;
+}
+
+
+
+h1 {
+    font-size: 30px;
+}
+
+.texto {
+    text-align: center;
+}
+
+.but {
+    margin-left: 40px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.but:hover {
+    letter-spacing: 6px;
+}
+
+.wrap {
+    background: rgba(0, 0, 0, 0.5) url("") no-repeat;
+    background-size: 1360px;
+    background-position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: -130px;
+    color: #ffff;
+    opacity: 1;
+}
+
+/*sections*/
+.txtP h1 {
+    text-align: center;
+}
+
+.txtP{
+    margin: 10px;
+}
+
+.page h1, p {
+    color: #33496D;
+}
+
+.page img {
+    background-attachment: fixed;
+    position: sticky;
+    max-width: 650px;
+    max-height: 400px;
+}
+
+.titleText span {
+    color: #0096C7;
     font-size: 50px;
     min-height: 1.5rem;
 }
-  
-*{
+
+* {
     box-sizing: border-box;
 }
-  
-.contact{    
+
+.contact {
     position: relative;
     min-width: 100vh;
     padding: 50px 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: url("");
+    background: url("/assets/fondo.jpg");
     background-size: cover;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
 }
-.content{
-      margin-left: 155px;
-      text-align: center;
+
+.content {
+    margin-left: 155px;
+    text-align: center;
 }
-  
-.contact .content{
-max-width: 800px;
-text-align: center;   
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
 }
-  
-  .contact .content h2{
-      font-size: 36px;
-      font-weight: 500;
-      color: #FFA200;
-  }
-  .contact .content p{
-      font-weight: 300;
-      color: #fff;
-  }
-  .contenedor{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      
-  }
-  .contenedor .contacInfo{
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-  
-  }
-  .contenedor .contacInfo .box{
-      position: relative;
-      padding: 20px 0;
-      display: flex;    
-  }
-  .contenedor .contacInfo .box .icon{
-      min-width: 60px;
-      height: 60px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      border-radius: 50%;
-      font-size: 22px;
-  
-  }
-  .contenedor .contacInfo .box .text{
-      display: flex;
-      margin-left: 20px;
-      font-size: 16px;
-      color: #Fff;
-      flex-direction: column;
-      font-weight: 300;
-  }
-  .contenedor .contacInfo .box .text h3{
-      font-weight: 500;
-      color: #33496D;
-  }
-  .contactForm{
-      width: 40%;
-      padding: 40px;
-      background: #fff;
-  }
-  .contactForm h2{
-      font-size: 30px;
-      color: #333333;
-      font-weight: 500;
-  }
-  .contactForm .inpuBox{
-      position: relative;
-      width: 100%;
-      margin-top: 10px;
-  }
-  .contactForm .inpuBox input,
-  .contactForm .inpuBoxtextarea{
-      width: 100%;
-      padding: 5px,0;
-      font-size: 16px;
-      margin: 10px 0;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid #3333;
-      resize: none;
-  }
-  .contactForm .inpuBox span{
-      position: absolute;
-      left: 0;
-      padding: 5px , 0;
-      font-size: 16px;
-      margin: 10px 0;
-      pointer-events: none;
-      transition: 0.5s;
-      color:#666
-  }
-  .contactForm .inpuBox input:focus ~ span,
-  .contactForm .inpuBox input:valid ~ span,
-  .contactForm .inpuBox textarea:focus ~ span,
-  .contactForm .inpuBox textarea:valid ~ span{
-      color: #e91e63;
-      font-size: 12px;
-      transform: translateY(-27px);
-  }
-  .contactForm .inpuBox input[type="submit"]{
-      width: 100px;
-      background: #a71818;
-      color: #Fff;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-      padding: 10px;
-  }
-  
-  
-.cover{
+
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.contact .content p {
+    font-weight: 300;
+    color: #fff;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.contenedor .contacInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contenedor .contacInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contenedor .contacInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+
+}
+
+.contenedor .contacInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #Fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contenedor .contacInfo .box .text h3 {
+    font-weight: 500;
+    color: #33496D;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.contactForm .inpuBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inpuBox input,
+.contactForm .inpuBoxtextarea {
+    width: 100%;
+    padding: 5px, 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #3333;
+    resize: none;
+}
+
+.contactForm .inpuBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px, 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666
+}
+
+.contactForm .inpuBox input:focus~span,
+.contactForm .inpuBox input:valid~span,
+.contactForm .inpuBox textarea:focus~span,
+.contactForm .inpuBox textarea:valid~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-27px);
+}
+
+.contactForm .inpuBox input[type="submit"] {
+    width: 100px;
+    background: #a71818;
+    color: #Fff;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 10px;
+}
+
+
+.cover {
     height: 400px;
     background-image: url(https://cdn.glitch.me/423a592b-8a52-4351-b29e-e42e61cd3353%2Fbaneer1.png?v=1634095465259);
     color: white;

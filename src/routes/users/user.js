@@ -1,51 +1,42 @@
 const { Router } = require('express');
-const connection  = require('../../data/db');
-const userControllers = require('../../controllers/users.controller');
-
 const router = Router();
-
+const connection = require('../../data/db');
 //validators
 const { body, validationResult } = require('express-validator');
 
-router.use((req, res, next) => {
-    res.header(
-      "Access-Control-Allow-Headers",
-      "x-access-token, Origin, Content-Type, Accept"
-    );
-    next();
-});
-
-router.get('/', function(req, res,) {
-    connection.query('SELECT Usuario.nombre, Usuario.telefono, Perro.nombre,Perro.raza FROM Perro JOIN Usuario ON Perro.idPerro=Usuario.idUsuario', function (error, results, fields) {
+router.get('/', function(req,res){
+    connection.query('SELECT * FROM Usuario', function (error, results, fields) {
         if (error) throw error;
-        res.json(results);
+        res.json(results)
+        return results;
     });
-    //res.json(data);
-});
-//
-router.post('/',body('email').isEmail(),body('telefono').isLength({ min: 10 }),(req,res) => {
-    //res.json(req.body.name);
-    // res.json(req.body.telefono);
-    // res.json(req.body.email);
-    var sql = "INSERT INTO Usuario (idUsuario,name,telefono,email) VALUES ('" + req.body.name + "', '" + req.body.telefono + "','" + req.body.email + "'))";
-    
-    connection.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("1 record inserted");
-    });
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }else{ 
-        console.log(req.body);
-        res.send("logueado");
-    }    
-});
-router.delete('/:id',(req,res) => {
-    res.json("eliminando");
+}); 
+//body('email').isEmail(),body('telefono').isLength({ min: 10 }),
+router.post('/',(req,res) => {
+    var sql = "INSERT INTO Usuario (nombre,telefono,email) VALUES ('" + req.body.name + "', '" + req.body.telefono + "','" + req.body.email + "')";
+    const data = JSON.stringify(req.body);
+    //const errors = validationResult(req);
+    connection.query(sql, function(error, results, fields){
+        if(error) throw error;
+        return res.send({error:false, message: 'Post Created'});
+ 
+    });   
+    console.log(req.body);
+    res.send("logueado");
+    console.log("data_:",data) 
 });
 
-router.put('/:id', (req,res)=>{
+ 
+router.delete('/(:id)',(req,res) => {
+    var sql=  `DELETE FROM Usuario WHERE idUsuario =`+req.body.id
+    connection.query(sql,[id],function(error, results, fields){
+        if(error) throw error;
+        return res.send({error:false, message: 'eliminado'});
+    });  
+    res.json("eliminando res");
+}); 
+
+router.put('/id', (req,res)=>{
     res.send("actualizando");
 });
 
