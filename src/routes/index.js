@@ -15,6 +15,9 @@ router.get('/dogs',(req,res) => {
 router.get('/registro',(req,res) =>{
     res.render('register');
 });
+router.get('/datos',(req,res) => {
+    res.render('landing');
+});
   
 
 module.exports = router;

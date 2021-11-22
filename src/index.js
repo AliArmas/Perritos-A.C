@@ -14,7 +14,7 @@ app.set('url', '/api/v1/');
 //motor de plantilla
 app.set('view engine','ejs');
 //carpetas estaticas 
-app.set('views',__dirname + '/views');
+app.set('views',__dirname + '/views'); 
 app.use(express.static(__dirname + '/public'))
 
 //midelwares

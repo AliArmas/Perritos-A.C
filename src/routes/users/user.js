@@ -13,19 +13,21 @@ router.get('/', function(req,res){
 }); 
 //body('email').isEmail(),body('telefono').isLength({ min: 10 }),
 router.post('/',(req,res) => {
-    var sql = "INSERT INTO Usuario (nombre,telefono,email) VALUES ('" + req.body.name + "', '" + req.body.telefono + "','" + req.body.email + "')";
-    const data = JSON.stringify(req.body);
-    //const errors = validationResult(req);
-    connection.query(sql, function(error, results, fields){
+    const { nombre, email,telefono } = req.body;
+    const newUsuario = {
+        nombre,
+        email,
+        telefono,
+    }
+    connection.query("INSERT INTO Usuario set ?",[newUsuario],function(error, results, fields){
         if(error) throw error;
         return res.send({error:false, message: 'Post Created'});
- 
-    });   
-    console.log(req.body);
-    res.send("logueado");
-    console.log("data_:",data) 
+    });    
 });
 
+router.post('/post', (req,res) =>{
+
+}); 
  
 router.delete('/(:id)',(req,res) => {
     var sql=  `DELETE FROM Usuario WHERE idUsuario =`+req.body.id
@@ -40,5 +42,4 @@ router.put('/id', (req,res)=>{
     res.send("actualizando");
 });
 
-router.get('/', )
 module.exports = router;
