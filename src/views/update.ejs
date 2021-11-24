@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="container">
+        <label for="">Actualza el estado</label>
+        <input type="text" name="status" placeholder="status">
+    </div>
+    <table class="table align-items-center">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Dueño</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < results.length; i++  ) { %>
+            <tr>
+              <th scope="row">
+                <%= results[i].idMascota %>
+              </th>
+              <td>
+                <%= results[i].nombreM %>
+              </td>
+              <td>
+                <%= results[i].tipoMascota %>
+              </td>
+              <td>
+                <%= results[i].raza %>
+              </td>
+              <td>
+                <%= results[i].nombre %>
+              </td>
+              <td>
+                <%= results[i].telefono %>
+              </td>
+              <td>
+                <%= results[i].status %>
+              </td>
+              <td>
+                <a href="" class="btn btn-info">Actualizar</a>
+              </td>
+              <td>
+                <a href="/admin/delete/<%= results[i].idMascota %>" class="btn btn-danger" type="submit">Eliminar</a>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+</body>
+</html>

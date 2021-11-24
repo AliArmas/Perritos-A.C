@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 require('dotenv').config();
+const { promisify} = require('util')
 
 const conf = {
     host: 'localhost',
@@ -10,5 +11,7 @@ const conf = {
 };
 
 const connection = mysql.createConnection(conf);
+
+
 module.exports = connection;
 // module.exports = connection;

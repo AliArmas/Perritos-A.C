@@ -3,6 +3,15 @@ body {
     background-color: var(--color-bg);
 }
 
+.contacto-index img{
+    width: 20px;
+    height: 20px;
+}
+.contacto-index ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
 /* Page structure */
 .wrapper {
     min-height: var(--wrapper-height);
@@ -166,8 +175,8 @@ h2 {
 }
 
 .footera, a {
-    background-color: #FFDDAB;
-    color: black;
+    background-color: #09132c;
+    color: white;
 }
 
 .footer aimg {

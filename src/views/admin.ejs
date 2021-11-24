@@ -1,8 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../views/modules/head'); %>
-<body>
-    <h1>Gatos</h1>
-</body>
+<%- include('../views/modules/head'); %>
+  <body>
+    <%- include('../views/modules/nvarAd'); %>
+      <div class="container">
+        <div class="mt-5">
+          <h3>Macotas regitradas</h3>
+          <div>
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Raza</th>
+                  <th scope="col">Dueño</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Plan</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var i = 0; i < results.length; i++  ) { %>
+                  <tr>
+                    <th scope="row">
+                      <%= results[i].idMascota %>
+                    </th>
+                    <td>
+                      <%= results[i].nombreM %>
+                    </td>
+                    <td>
+                      <%= results[i].tipoMascota %>
+                    </td>
+                    <td>
+                      <%= results[i].raza %>
+                    </td>
+                    <td>
+                      <%= results[i].nombre %>
+                    </td>
+                    <td>
+                      <%= results[i].telefono %>
+                    </td>
+                    <td>
+                      <%= results[i].plan %>
+                    </td>
+                    <td>
+                      <%= results[i].status %>
+                    </td>
+                    <td>
+                      <a href="/api/v1/edit/<%= results[i].idMascota %>" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#ModalUpdate"data-bs-toggle="modal" data-bs-target="#ModalUpdate">Actualizar</a>
+                      <div class="modal fade" id="ModalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Estado de mascota</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form action="/api/v1/edit/<%= results[i].idMascota %>" method="post">
+                                <input type="text" name="status" placeholder="status">
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="submit" class="btn btn-success">Guardar</button>
+                              <button type="button" class="btn btn-danger close" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="/admin/delete/<%= results[i].idMascota %>" class="btn btn-danger" type="submit">Eliminar</a>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      
+  </body>
 
 </html>
