@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../views/modules/head'); %>
+  <body>
+    <%- include('../views/modules/nvarAd'); %>
+      <div class="container">
+        <div class="mt-5">
+          <h3>Usuarios regitrados</h3>
+          <div>
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Plan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var i = 0; i < results.length; i++  ) { %>
+                  <tr>
+                    <th scope="row">
+                      <%= results[i].idUsuario %>
+                    </th>
+                    <td>
+                      <%= results[i].nombre %>
+                    </td>
+                    <td>
+                      <%= results[i].telefono %>
+                    </td>
+                    <td>
+                      <%= results[i].email %>
+                    </td>
+                    <td>
+                      <%= results[i].plan %>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

@@ -2,24 +2,79 @@
 <html lang="en">
 <%- include('../views/modules/head'); %>
   <body>
-    <%- include('../views/modules/navbar'); %>
-    <div class="container">
-      <div class="row">
-        <h1>Registro</h1>
-        <div>
-          <form method="post" action="/api/v1/mascota/">
-            <input type="text" name="nombreM" placeholder="Nombre mascota">
-            <input type="text" name="tipoMascota" placeholder="Tipo de mascota">
-            <input type="text" name="raza" placeholder="raza de mascota">
-            <input type="number" name="peso" placeholder="peso de mascota">
-            <input type="text" name="status" placeholder="status">
-            <input type="number" name="estatura" placeholder="estatura mascota">
-            <input type="number" name="Usuario_idUsuario" id="">
-            <button class="btn btn-success" type="submit">Registrar</button>
-          </form>
+    <%- include('../views/modules/nvarAd'); %>
+      <div class="container">
+        <div class="row">
+          <h1>Pre registro</h1>
+          <di v class="container mt-5">
+            <form action="/api/v1/users" method="post">
+              <div>
+                <h3>Datos Usuario</h3>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="form-group">
+                      <input type="text" name="nombre" id="" placeholder="nombre">
+                      <br>
+                      <br>
+                      <input type="text" name="email" placeholder="email">
+                      <br>
+                      <br>
+
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-group">
+                      <input type="text" name="telefono" placeholder="telefono">
+                      <br>
+                      <br>
+                      <div class="btn-group">
+                        <select class="form-select" aria-label="Default select example" name="plan">
+                          <option selected>Selecciona el plan</option>
+                          <option value="1">Basico</option>
+                          <option value="2">Normal</option>
+                          <option value="3">Vip</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-success" type="submit">Registrar</button>
+                </div>
+              </div>
+            </form>
         </div>
+        <div class="container mt-5">
+          <form action="/api/v1/mascota" method="post">
+            <div>
+              <h3>Datos Mascota</h3>
+              <div class="row">
+                <div class="col-3">
+                  <div class="form-group">
+                    <input type="text" name="nombreM" placeholder="Nombre mascota">
+                    <br>
+                    <br>
+                    <input type="text" name="tipoMascota" placeholder="Tipo de mascota">
+                    <br>
+                    <br>
+                    <input type="text" name="raza" placeholder="raza de mascota">
+                  </div>
+                </div>
+                <div class="col-3">
+                  <input type="number" name="peso" placeholder="peso de mascota">
+                  <br>
+                  <br>
+                  <input type="number" name="estatura" placeholder="estatura mascota">
+                  <br>
+                  <br>
+                  <input type="number" name="Usuario_idUsuario" id="">
+                  <br>
+                  <br>
+                </div>
+                <button class="btn btn-success" type="submit">Registrar</button>
+              </div>
+            </div>
+          </form>
       </div>
-    </div>
+      </div>
+      </div>
   </body>
-  <%- include('../views/modules/footer'); %>
 </html>

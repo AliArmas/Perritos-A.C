@@ -4,8 +4,8 @@ body {
 }
 
 .contacto-index img{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 .contacto-index ul li{
     text-decoration: none;
@@ -173,17 +173,18 @@ h2 {
     width: 100%;
     height: 100%;
 }
-
-.footera, a {
+ /*
+ estilos para footer 
+ */
+.footer, a {
     background-color: #09132c;
     color: white;
 }
 
-.footer aimg {
+.footer img {
     width: 30px;
     margin-right: 10px;
 }
-
 .container-footer {
     margin-left: 40px;
 }
@@ -194,10 +195,17 @@ h2 {
     text-align: center;
 }
 
-.footera ul, a {
+.footer ul, a {
     text-decoration: none;
     margin-top: 10px;
     list-style: none;
+}
+/*
+fuente para footer
+*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.footer h5{
+    font-family: 'Anton', sans-serif;
 }
 
 footer{

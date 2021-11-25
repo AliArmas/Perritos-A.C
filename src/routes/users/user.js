@@ -16,7 +16,12 @@ router.post('/',(req,res) => {
         if(error) throw error;
     });    
 });
- 
+
+router.get('/',function (req,res){
+    connection.query("SELECT * FROM Usuario", function (error,results, fields){
+        res.render('users',{results})
+    }) 
+});
 router.delete('/:id',(req,res) => {
     var sql=  `DELETE FROM Usuario WHERE idUsuario =`+req.body.id
     connection.query(sql,[id],function(error, results, fields){

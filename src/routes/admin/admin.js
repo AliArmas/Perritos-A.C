@@ -7,7 +7,6 @@ router.get('/',function (req,res){
         res.render('admin',{results})
     }) 
 });
-
 router.get('/edit/:id', function(req,res){
     const { id } = req.params
     connection.query("SELECT * FROM Mascota WHERE idMascota = ?",id, function(error,results){
